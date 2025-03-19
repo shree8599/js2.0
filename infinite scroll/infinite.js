@@ -4,6 +4,7 @@ let images =[]
 let load 
 const apikey= "BKqaB-PbZqheqKroNRofwvDBDzj6ZS73PLizNBtPdRo"
 const count = 18
+const head = document.querySelector('.infinite')
 
 
 async function getPhotos(){
@@ -46,6 +47,7 @@ document.body.appendChild(darkModeToggle);
 darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    
 });
 
 // Add CSS styles
@@ -58,11 +60,16 @@ style.textContent = `
         top: 20px;
         right: 20px;
         padding: 10px;
-        border: 2px solid #fff;
+        border: 2px solid #333;
         border-radius: 50%;
         cursor: pointer;
         font-size: 20px;
         background: transparent;
+        z-index: 1000;
+        transition: border-color 0.3s ease;
+    }
+    .dark-mode .dark-mode-toggle {
+        border-color: #fff;
     }
 `;
 document.head.appendChild(style);
