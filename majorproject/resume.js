@@ -4,6 +4,7 @@ const close = document.querySelector(".container");
 const image = document.querySelector(".image-container");
 const submit = document.querySelector(".submit");
 const resume = document.querySelector(".resume");
+const body = document.querySelector("body");
 button.addEventListener('click', () => {
     signin.style.display = "flex";
     close.style.display = "none";
@@ -14,6 +15,7 @@ submit.addEventListener('click', (e) => {
     e.preventDefault();
     signin.style.display = "none";
     resume.style.display = "flex";
+
 });
 
 
