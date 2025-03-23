@@ -102,9 +102,9 @@
     </div>
 
     <div class="resume" style="display: none; flex-direction: column; ">
-        <h1>Lets build Your resume</h1>
+        <h1>Lets build  Your resume</h1>
      
-        <p style="display: inline-block; background-color: black;color:#068FFF;font-size: 2rem;text-align: center;">About section</p>
+        <p style="display: inline-block; background-color: #1e2532;color:white;font-size: 2rem;text-align: center;">About section</p>
         <div class="about" >
          
         <label for="fn">First Name:
@@ -133,20 +133,20 @@
             id="address" name="address" placeholder="eg. 123 Main St, City, Country" required>
         </label>
         <label for="Yi">Your image
-            <input type="file">
+            <input type="file" class="profile">
         </label>
         <label for="de">Designation:
             <input type="text"
-            id="de" name="de" placeholder="eg. Sr.Accountant" required>
+            id="designation" name="de" placeholder="eg. Sr.Accountant" required>
         </label>
         <label for="summary">Summary:
-            <textarea id="summary" name="summary" rows="4" cols="50" placeholder="Write a brief summary about yourself"></textarea>
+            <input id="summary" name="summary" rows="4" cols="50" placeholder="">
         </label>
     </div>
     
 
     
-    <p style="display: inline-block; background-color: black;color:#068FFF;font-size: 2rem;text-align: center;">Achievements</p>
+    <p style="display: inline-block; background-color:  #1e2532;color:white;font-size: 2rem;text-align: center;">Achievements</p>
     
          <div class="achivements">
           
@@ -156,18 +156,18 @@
             id="ach1" name="ach1" placeholder="eg. Employee of the Month" required>
         </label>
         <label for="desc">Achievement Description:
-            <textarea id="desc" name="desc" rows="4" cols="50" placeholder="Write a brief description of your achievement"></textarea>
+            <input id="desc" name="desc" rows="4" cols="50" placeholder="Write a brief description of your achievement">
         </label>
         <label for="ach2">Title:
             <input type="text"
             id="ach2" name="ach2" placeholder="eg. Employee of the Month" required>
         </label>
         <label for="desc2">Achievement Description:
-            <textarea id="desc2" name="desc2" rows="4" cols="50" placeholder="Write a brief description of your achievement"></textarea>
+            <input id="desc2" name="desc2" rows="4" cols="50" placeholder="Write a brief description of your achievement">
         </label>
     </div>
     
-    <p style="display: inline-block; background-color: black;color:#068FFF;font-size: 2rem;text-align: center;">Education</p>
+    <p style="display: inline-block; background-color:  #1e2532;color:white;font-size: 2rem;text-align: center;">Education</p>
         <div class="education">
       
         
@@ -185,7 +185,7 @@
         </label>
     </div>
 
-        <p  style="display: inline-block; background-color: black;color: #068FFF;font-size: 2rem;text-align: center;">Experience</p>
+        <p  style="display: inline-block; background-color:  #1e2532;color:white;font-size: 2rem;text-align: center;">Experience</p>
         <div class="experience">
          
         
@@ -198,7 +198,7 @@
             id="jobtitle" name="jobtitle" placeholder="eg. Software Engineer" required>
         </label>
         <label for="jobdesc">Job Description:
-            <textarea id="jobdesc" name="jobdesc" rows="4" cols="50" placeholder="Write a brief description of your job responsibilities"></textarea>
+            <input id="jobdesc" name="jobdesc" rows="4" cols="50" placeholder="Write a brief description of your job responsibilities">
         </label>
         <label for="startdate">Start Date:
             <input type="text"
@@ -212,7 +212,7 @@
         </div>
 
 
-        <p style="display: inline-block; background-color: black;color:#068FFF;font-size: 2rem;text-align: center;">Skills</p>
+        <p style="display: inline-block; background-color: #1e2532;color:white;font-size: 2rem;text-align: center;">Skills</p>
         
          <div class="skills">
   
@@ -229,7 +229,7 @@
         </div>
 
 
-        <p style="display: inline-block; background-color: black;color:#068FFF;font-size: 2rem;text-align: center;">Projects</p>
+        <p style="display: inline-block; background-color:  #1e2532;color:white;font-size: 2rem;text-align: center;">Projects</p>
 
     <div class="projects">
     
@@ -239,17 +239,35 @@
             id="project1" name="project1" placeholder="eg. Personal Website" required>
         </label>
         <label for="projectdesc">Project Description:
-            <textarea id="projectdesc" name="projectdesc" rows="4" cols="50" placeholder="Write a brief description of your project"></textarea>
+            <input id="projectdesc" name="projectdesc" rows="4" cols="50" placeholder="Write a brief description of your project">
         </label>
         <label for="project2">Project 2:
             <input type="text"
             id="project2" name="project2" placeholder="eg. Personal Website" required>
         </label>
         <label for="projectdesc2">Project Description:
-            <textarea id="projectdesc2" name="projectdesc2" rows="4" cols="50" placeholder="Write a brief description of your project"></textarea>
+            <input id="projectdesc2" name="projectdesc2" rows="4" cols="50" placeholder="Write a brief description of your project">
         </label>
+
+
+
+
     </div>
-    
+            <input type="button"
+               value="Print"
+               onclick="window.print()" style="width: 80px;height: auto;background-color: #068FFF;"/>
+    </div>
+
+<div class="cv">
+    <div class="left">
+      
+       
+
+    </div>
+    <div class="right"></div>
+</div>
+
+
 
 </body>
 <script src="resume.js"></script>

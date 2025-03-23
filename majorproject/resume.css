@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-color: #fff;
+font-size: large;
 }
 
 .main{
@@ -260,7 +260,7 @@ margin-top: 20px;
    
     margin: 50px auto;
     padding: 30px;
-  background-color:#000000;
+    
   
  
     display: grid;
@@ -268,93 +268,33 @@ margin-top: 20px;
     gap: 30px;
   }
 
-  .about{
-  
-    color: #333;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-    font-size: 18px;
-    line-height: 2.0;
-    gap: 20px;
-display: flex;
-flex-wrap: wrap;
-  }
-
-  .education{
-
-    color: #333;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-    font-size: 18px;
-    line-height: 2.0;
-    gap: 20px;
-display: flex;
-flex-wrap: wrap;
-  }
-
-
-  .achivements{
- 
-    color: #333;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-    font-size: 18px;
-    line-height: 2.0;
-    gap: 20px;
-display: flex;
-flex-wrap: wrap;
-  }
-  .experience{
-
-    color: #333;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-    font-size: 18px;
-    line-height: 2.0;
-    gap: 20px;
-display: flex;
-flex-wrap: wrap;
-  }
-  .skills{
-   
-    color: #333;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-    font-size: 18px;
-    line-height: 2.0;
-    gap: 20px;
-display: flex;
-flex-wrap: wrap;
-  }
-  .projects{
-    
-    color: #333;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-    font-size: 18px;
-    line-height: 2.0;
-    gap: 20px;
-display: flex;
-flex-wrap: wrap;
+.resume p{
+  border-radius: 10px ;
 }
+.resume input{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 2px ;
+  margin: 2px;
+  font-size: 20px;
+}
+
+
+  .about ,.education, .achivements, .experience, .skills, .projects{
+  
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(156, 159, 154, 0.4);
+    border: 0px solid #ccc;
+    border-radius: 20px;
+    font-size: 30px;
+    line-height: 2.0;
+    gap: 20px;
+display: flex;
+flex-wrap: wrap;
+  }
 
 /* Additional styling */
 
