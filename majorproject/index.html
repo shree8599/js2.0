@@ -12,7 +12,9 @@
             overflow: hidden;
             position: relative;
             width: 100%;
-            height: auto;
+            height: 18rem;
+            border-radius: 10px;
+          
             
             
         }
@@ -20,13 +22,17 @@
         .image-slider {
             display: flex;
             width: 300%;
-            animation: slide 15s infinite linear;
+            height: 100%;
+            animation: slide 25s infinite linear;
         }
 
         .image-slider img {
-            width: 35rem;
-            height: 35rem;
+            width: 25rem;
+            height: 18rem;
+            flex-shrink: 0;
             object-fit: contain;
+            border-radius: 10px;
+            
         }
 
         @keyframes slide {
@@ -38,17 +44,15 @@
 <body style="background-color: #1a1a1a;">
     <div class="container">
 <div class="main">
-    <h1 style=" text-align: center;font-size: 5.5rem;">Resume builder</h1>
+    <h1 style=" text-align: center;font-size: 4.0rem;">Resume builder</h1>
     <p style="color:aliceblue; text-align: center;font-size: 1rem;">Build your resume in minutes </p>
 
-    <p >    CareerCanvas is a web application that helps users create professional resumes quickly and easily. The app offers a user-friendly interface, customizable templates, and tips for writing effective resumes. Users can input their personal information, work experience, education, and skills, and the app will generate a polished resume in minutes. CareerCanvas aims to simplify the resume-building process and help job seekers stand out in a competitive job market.
+    <p >    CareerCanvas is a web application that helps users create professional resumes quickly and easily. The app offers a user-friendly interface, customizable templates, and tips for writing effective resumes. Users can input their personal information, work experience, education, and skills, and the app will generate a polished resume in minutes.
     </p>
 </div>
-
 <div class="signin">
     <p>lets get started </p>
-<button id="button" type="button">signin </button>
-</div>
+<button id="button" type="button"> signin </button>
 </div>
 
 <div class="image-container">
@@ -58,8 +62,19 @@
         <img src="image3.jpg" alt="Image 3">
         <img src="image4.jpg" alt="Image 3">
         <img src="image5.jpg" alt="Image 3">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <img src="image4.jpg" alt="Image 3">
+        <img src="image5.jpg" alt="Image 3">
     </div>
 </div>
+
+
+
+
+</div>
+
 
 
 
@@ -72,31 +87,31 @@
     <p class="title">Register </p>
     <p class="message">Signup now and get full access to our app. </p>
         <div class="flex">
-        <label >
-            <input class="input" type="text" placeholder="" required="" autofocus> 
+        <label>
+            <input class="firstname input" type="text" name="firstname" required autofocus> 
             <span>Firstname</span>
         </label>
 
         <label>
-            <input class="input" type="text" placeholder="" required="">
+            <input class="lastname input" type="text" name="lastname" required>
             <span>Lastname</span>
         </label>
-    </div>  
+        </div>  
             
-    <label>
-        <input class="input" type="email" placeholder="" required="">
+        <label>
+        <input class="email1 input" type="email" name="email" required>
         <span>Email</span>
-    </label> 
+        </label> 
         
-    <label>
-        <input class="input" type="password" placeholder="" required="">
+        <label>
+        <input class="password input" type="password" name="password" required>
         <span>Password</span>
-    </label>
-    <label>
-        <input class="input" type="password" placeholder="" required="">
+        </label>
+        <label>
+        <input class="confirm input" type="password" name="confirmPassword" required>
         <span>Confirm password</span>
-    </label>
-    <button class="submit">Submit</button>
+        </label>
+    <button type="submit"  class="submit">Submit</button>
 
 </form>
     </div>
@@ -255,16 +270,51 @@
     </div>
             <input type="button"
                value="Print"
-               onclick="window.print()" style="width: 80px;height: auto;background-color: #068FFF;"/>
+               onclick="window.print()" style="width: 80px;height: auto;background-color: #068FFF; color: aliceblue;"/>
+
+               <button type="submit" class="create" style="width:10rem;">Create cv</button>
     </div>
 
-<div class="cv">
+<div class="cv" style="display: none;">
     <div class="left">
-      
-       
+        <img src="" alt="">
+        <h1 id="name"></h1>
+        <h2 id="designation"></h2>
+        <h1>About</h1>
+        <p id="mail"></p>
+        <p id="no"></p>
+        <p id="address"></p>
+        <p id="sum"></p>
+        <h1>Skills</h1>
+        <p id="skill1"></p>
+        <p id="skill2"></p>
+
 
     </div>
-    <div class="right"></div>
+    <div class="right">
+        <h1>Achievements</h1>
+        <p id="title"></p>
+        <p id="desc"></p>
+        <p id="title2"></p>
+        <p id="desc2"></p>
+        <h1>Education</h1>
+        <p id="school"></p>
+        <p id="degree"></p>
+        <p id="city"></p>
+        <p id="year"></p>
+        <h1>Experience</h1>
+        <p id="company"></p>
+        <p id="jobtitle"></p>
+        <p id="jobdesc"></p>
+        <p id="startdate"></p>
+        <p id="enddate"></p>
+        <h1>Projects</h1>
+        <p id="project1"></p>
+        <p id="projectdesc"></p>
+        <p id="project2"></p>
+        <p id="projectdesc2"></p>
+        
+    </div>
 </div>
 
 

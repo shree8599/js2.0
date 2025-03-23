@@ -5,20 +5,15 @@ const image = document.querySelector(".image-container");
 const submit = document.querySelector(".submit");
 const resume = document.querySelector(".resume");
 const body = document.querySelector("body");
+const firstn = document.querySelector(".firstname");
+const lastn = document.querySelector(".lastname");
+const email1= document.querySelector(".email1");
+const password = document.querySelector(".password");
+const confirm = document.querySelector(".confirm");
+const create = document.querySelector(".create");
+const cv = document.querySelector(".cv");
 
-const about=document.querySelectorAll(".about[input]");
-const photo = document.querySelector(".photo");
-const fn = document.querySelector("#fn");
-const mn = document.querySelector("#mn");
-const ln = document.querySelector("#ln");
-const designation = document.querySelector("#designation");
-const email = document.querySelector("#email");
-const address = document.querySelector("#address");
-const phone = document.querySelector("#phone");
-const summary = document.querySelector("#summary");
-const left = document.querySelector(".left");
-const right = document.querySelector(".right");
-const skills = document.querySelector("#skills");
+
 
 button.addEventListener('click', () => {
     signin.style.display = "flex";
@@ -28,15 +23,44 @@ button.addEventListener('click', () => {
 
 submit.addEventListener('click', (e) => {
     e.preventDefault();
+
+    if (firstn.value=="" || lastn.value=="" || email1.value=="" || password.value=="" || confirm.value=="") {
+        alert("Please fill all the fields");
+        return;
+    }
+
+    if (password.value !== confirm.value) {
+        alert("Passwords do not match");
+        return;
+    }
+
     signin.style.display = "none";
     resume.style.display = "flex";
     body.style.backgroundColor = "white";
     body.style.color = "black";
+    localStorage.setItem('firstName', firstn.value);
+    localStorage.setItem('lastName', lastn.value);
+
+    // Display welcome message
+    const welcomeMessage = document.createElement('h2');
+    welcomeMessage.classList.add('welcome-message');
+
+    welcomeMessage.style.marginTop = "20px";
+    welcomeMessage.style.fontSize = "2rem";
+    welcomeMessage.style.fontFamily = "Arial, sans-serif";
+    welcomeMessage.style.fontWeight = "bold";
+ 
+
+    welcomeMessage.textContent = `Welcome ${localStorage.getItem('firstName')} ${localStorage.getItem('lastName')}!`;
+    resume.insertBefore(welcomeMessage, resume.firstChild);
 
 });
 
-about.addEventListener('input', (e) => {
-    
-});
+create.addEventListener('click', (e) => {
+
+cv.style.display = "flex";
+})
+
+
 
 
