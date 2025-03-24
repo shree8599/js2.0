@@ -357,11 +357,12 @@ flex-wrap: wrap;
   gap: 20px;
   width: 25%;
   padding: 30px;
-  background-color: #e72626;
+  background-color:#336D82;
   color: #fff;
   height: auto;
   border-radius: 15px;
   box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+  
 }
 
 .left img {
@@ -412,3 +413,4 @@ flex-wrap: wrap;
   color: #fff;
   padding: 10px 20px;
 }
+
