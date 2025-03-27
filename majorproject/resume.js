@@ -57,6 +57,7 @@ submit.addEventListener('click', (e) => {
 });
 
 create.addEventListener('click', (e) => {
+resume.style.display = "none";
 
 cv.style.display = "flex";
 generateCV();
@@ -160,119 +161,60 @@ const fragment1 = document.createDocumentFragment();
         const rightDiv = document.querySelector('.right');
         const achivement = document.createElement('h1');
         achivement.textContent = "Achievements";
-        achivement.style.fontSize = "24px";
-        achivement.style.marginBottom = "15px";
-        achivement.style.color = "#2c3e50";
 
         const title = document.createElement('h2');
         title.innerText = ach1.value;
-        title.style.fontSize = "18px";
-        title.style.marginBottom = "10px";
-        title.style.color = "#34495e";
 
         const description = document.createElement('p');
         description.innerText = desc.value;
-        description.style.fontSize = "16px";
-        description.style.marginBottom = "15px";
-        description.style.lineHeight = "1.5";
 
         const title2 = document.createElement('h2');
         title2.innerText = ach2.value;
-        title2.style.fontSize = "18px";
-        title2.style.marginBottom = "10px";
-        title2.style.color = "#34495e";
 
         const description2 = document.createElement('p');
         description2.innerText = desc2.value;
-        description2.style.fontSize = "16px";
-        description2.style.marginBottom = "15px";
-        description2.style.lineHeight = "1.5";
 
         const education = document.createElement('h1');
         education.textContent = "Education";
-        education.style.fontSize = "24px";
-        education.style.marginTop = "20px";
-        education.style.marginBottom = "15px";
-        education.style.color = "#2c3e50";
 
         const schoolname = document.createElement('h2');
         schoolname.innerText = school.value;
-        schoolname.style.fontSize = "18px";
-        schoolname.style.marginBottom = "5px";
-        schoolname.style.color = "#34495e";
 
         const degree1 = document.createElement('h2');
         degree1.innerText = degree.value;
-        degree1.style.fontSize = "18px";
-        degree1.style.marginBottom = "5px";
-        degree1.style.fontStyle = "italic";
 
         const grad = document.createElement('h2');
         grad.innerText = gradyear.value;
-        grad.style.fontSize = "16px";
-        grad.style.marginBottom = "15px";
-        grad.style.color = "#7f8c8d";
 
         const work = document.createElement('h1');
         work.textContent = "Work Experience";
-        work.style.fontSize = "24px";
-        work.style.marginTop = "20px";
-        work.style.marginBottom = "15px";
-        work.style.color = "#2c3e50";
 
         const companyname = document.createElement('h2');
         companyname.innerText = company.value;
-        companyname.style.fontSize = "18px";
-        companyname.style.marginBottom = "5px";
-        companyname.style.color = "#34495e";
 
         const jobtitle = document.createElement('h2');
         jobtitle.innerText = position.value;
-        jobtitle.style.fontSize = "18px";
-        jobtitle.style.marginBottom = "5px";
-        jobtitle.style.fontStyle = "italic";
 
         const jobdescription = document.createElement('p');
         jobdescription.innerText = jobdesc.value;
-        jobdescription.style.fontSize = "16px";
-        jobdescription.style.marginBottom = "10px";
-        jobdescription.style.lineHeight = "1.5";
 
         const start = document.createElement('h2');
         start.innerText = start1.value;
-        start.style.fontSize = "16px";
-        start.style.color = "#7f8c8d";
 
         const end = document.createElement('h2');
         end.innerText = end1.value;
-        end.style.fontSize = "16px";
-        end.style.marginBottom = "15px";
-        end.style.color = "#7f8c8d";
 
         const project = document.createElement('h1');
         project.textContent = "Projects";
-        project.style.fontSize = "24px";
-        project.style.marginTop = "20px";
-        project.style.marginBottom = "15px";
-        project.style.color = "#2c3e50";
 
         const projectname = document.createElement('h2');
         projectname.innerText = project1.value;
-        projectname.style.fontSize = "18px";
-        projectname.style.marginBottom = "5px";
-        projectname.style.color = "#34495e";
 
         const projectdescription = document.createElement('p');
         projectdescription.innerText = projectdesc1.value;
-        projectdescription.style.fontSize = "16px";
-        projectdescription.style.marginBottom = "15px";
-        projectdescription.style.lineHeight = "1.5";
 
         const projectname2 = document.createElement('h2');
         projectname2.innerText = project2.value;
-        projectname2.style.fontSize = "18px";
-        projectname2.style.marginBottom = "5px";
-        projectname2.style.color = "#34495e";
 
         const projectdescription2 = document.createElement('p');
         projectdescription2.innerText = projectdesc2.value;
@@ -336,3 +278,104 @@ photoInput.value = '';
 
 
 
+// // Job Search API Integration
+// async function searchJobs(keywords) {
+//     try {
+//         const INDEED_API_KEY = 'mbbfNybzlz94YI8mdI0tD9iwAroS6Oz1jAVCEKQplD34aIm8ITkboeUXmU5CRFg6';
+//         const response = await fetch(`https://api.indeed.com/ads/apisearch?publisher=${INDEED_API_KEY}&q=${keywords}&format=json`);
+//         const data = await response.json();
+//         displayJobs(data.results);
+//         console.log(data.results);
+//     } catch (error) {
+//         console.error('Error fetching jobs:', error);
+//     }
+// }
+
+// // GitHub Projects API Integration
+// async function getGitHubProjects(technology) {
+//     try {
+//         const response = await fetch(`https://api.github.com/search/repositories?q=language:${technology}&sort=stars`);
+//         const data = await response.json();
+//         displayProjects(data.items);
+//     } catch (error) {
+//         console.error('Error fetching projects:', error);
+//     }
+// }
+
+// // Display Functions
+// function displayJobs(jobs) {
+//     const jobsContainer = document.createElement('div');
+//     jobsContainer.className = 'jobs-suggestions';
+//     jobs.forEach(job => {
+//         const jobElement = document.createElement('div');
+//         jobElement.innerHTML = `
+//             <h3>${job.title}</h3>
+//             <p>${job.company}</p>
+//             <p>${job.location}</p>
+//         `;
+//         jobsContainer.appendChild(jobElement);
+//     });
+//     document.querySelector('.resume').appendChild(jobsContainer);
+// }
+
+// function displayProjects(projects) {
+//     const projectsContainer = document.createElement('div');
+//     projectsContainer.className = 'project-recommendations';
+//     projects.slice(0, 5).forEach(project => {
+//         const projectElement = document.createElement('div');
+//         projectElement.innerHTML = `
+//             <h3>${project.name}</h3>
+//             <p>${project.description}</p>
+//             <a href="${project.html_url}">View Project</a>
+//         `;
+//         projectsContainer.appendChild(projectElement);
+//     });
+//     document.querySelector('.resume').appendChild(projectsContainer);
+// }
+
+// // User Profile Management
+// class UserProfile {
+//     constructor(userId) {
+//         this.userId = userId;
+//         this.progress = [];
+//         this.preferences = {};
+//     }
+
+//     updateProgress(activity) {
+//         this.progress.push({
+//             activity,
+//             timestamp: new Date()
+//         });
+//     }
+
+//     savePreferences(prefs) {
+//         this.preferences = {...this.preferences, ...prefs};
+//         localStorage.setItem(`userPrefs_${this.userId}`, JSON.stringify(this.preferences));
+//     }
+// }
+
+// // Initialize features when resume is generated
+// create.addEventListener('click', async () => {
+//     const skills = document.querySelector("#skill1").value;
+    
+//     // Mock job data
+//     const mockJobs = [
+//         { title: "Software Developer", company: "Tech Corp", location: "Remote" },
+//         { title: "Web Developer", company: "Digital Solutions", location: "New York" },
+//         { title: "Frontend Engineer", company: "StartupX", location: "San Francisco" }
+//     ];
+
+//     // Mock project data
+//     const mockProjects = [
+//         { name: "Awesome Project", description: "A great project using " + skills, html_url: "#" },
+//         { name: "Cool App", description: "Interactive application with " + skills, html_url: "#" },
+//         { name: "Dev Tool", description: "Developer tools built with " + skills, html_url: "#" }
+//     ];
+
+//     // Display mock data
+//     displayJobs(mockJobs);
+//     displayProjects(mockProjects);
+    
+//     const userProfile = new UserProfile(localStorage.getItem('userId'));
+//     userProfile.updateProgress('Resume Generated');
+// });
